@@ -11,7 +11,7 @@
 	<c:url value="/admin/category" var="deletelist"></c:url>
 	<form role="form" action="${deletelist}" method="post"
 		enctype="multipart/form-data">
-		<div class="col-md-12 col-sm-12  ">
+		<div class="col-md-12 col-sm-12  "> 
 			<div class="x_panel">
 				<div class="x_title">
 					<h2>

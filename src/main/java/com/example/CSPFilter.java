@@ -1,6 +1,7 @@
 package com.example;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Base64;
@@ -15,7 +16,7 @@ public class CSPFilter implements Filter{
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
     	
-        HttpServletResponse httpResponse = (HttpServletResponse) response;
+        HttpServletResponse httpResponse = (HttpServletResponse) response; 
         
         httpResponse.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com; style-src 'self' https://maxcdn.bootstrapcdn.com; img-src 'self' https://www.asama-bike.com;");
         chain.doFilter(request, response);
