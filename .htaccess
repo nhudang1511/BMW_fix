@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^signup$ /Trang_Web_Ban_Hang/SignupController [NC,L]
