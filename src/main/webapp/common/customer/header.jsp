@@ -57,7 +57,7 @@
 						</div></li>
 				</c:if>
 				<div class="input-group input-group-sm">
-					<input value="${txtS}" name="txt" type="text" class="form-control">
+					<input value= "<c:out value="${txtS}"></c:out>" name="txt" type="text" class="form-control">
 					<div class="input-group-append">
 						<button type= "submit" class="btn btn-secondary btn-number">
 							<i class="fa fa-search"></i>
