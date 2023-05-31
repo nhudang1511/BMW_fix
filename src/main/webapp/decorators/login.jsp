@@ -57,6 +57,7 @@
 			<button class="btn btn-success btn-block" type="submit">
 				<i class="fas fa-sign-in-alt"></i> Sign in
 			</button>
+			<a id="forgot_pswd" href="<c:url value="/reset-password"/>">Forgot password?</a>
 			<hr>
 			<!-- <p>Don't have an account!</p>  -->
 			<button class="btn btn-primary btn-block" type="button"
