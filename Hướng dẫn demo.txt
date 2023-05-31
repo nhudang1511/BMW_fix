@@ -1,0 +1,5 @@
+- Bước 1: Tải file code trên utex hoặc github: https://github.com/nhudang1511/WebBanXeDap về máy
+- Bước 2: Giải nén file, mở eclipse
+- Bước 3: Chọn Import -> Existing Projects into Workspace --> Browse --> Chọn folder đồ án
+- Bước 4: Tải file sql chạy, thay địa chỉ sql phù hợp cho máy
+- Bước 4: Bấm chuột phải vào project --> Run as --> Run on Server
