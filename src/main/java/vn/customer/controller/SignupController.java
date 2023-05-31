@@ -16,7 +16,7 @@ import vn.models.*;
 /**
  * Servlet implementation class SignupController
  */
-@WebServlet(urlPatterns = {"/signup"})
+//@WebServlet(urlPatterns = {"/signup"})
 public class SignupController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

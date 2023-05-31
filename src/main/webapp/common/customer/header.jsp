@@ -33,13 +33,11 @@
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="<c:url value="/category?index=1&index1=12"/>">Product</a>
-				</li>
-
-				
+				</li>	
 			</ul>
 
 			<form method="post" action="search" class="form-inline my-2 my-lg-0">
-				<c:if test="${sessionScope.account ==null }">
+				<c:if test="${sessionScope.account2 ==null }">
 					<li class="nav-item"><a aria-haspopup="true"
 						aria-expanded="false" style='font-size: 16px; color: white'
 						href="login"> Sign in | Sign up </a></li>

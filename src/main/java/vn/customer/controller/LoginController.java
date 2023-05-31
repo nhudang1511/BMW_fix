@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
 
 import vn.dao.*;
 import vn.models.*;
@@ -49,6 +50,17 @@ public class LoginController extends HttpServlet {
 		{
 			HttpSession session = req.getSession();
 			session.setAttribute("account", account);
+//			Cookie sessionCookie = new Cookie("JSESSIONID", session.getId());
+
+//			sessionCookie.setSecure(true);
+//			sessionCookie.setPath("/");
+//			sessionCookie.setHttpOnly(true);
+////			resp.addCookie(sessionCookie);			
+//			String cookieString = sessionCookie.getName() + "=" + sessionCookie.getValue() + "; Secure; HttpOnly; SameSite=Strict";
+//			resp.setHeader("Set-Cookie", cookieString);
+//			resp.setHeader("X-Content-Type-Options", "nosniff");
+//			resp.addHeader("Set-Cookie", "cookieName=cookieValue; Secure; HttpOnly; SameSite=Strict");
+
 			String s = account.get_role();
 			if(s.equals("Admin"))
 				resp.sendRedirect(req.getContextPath() + "/admin/dashboard/revenue");

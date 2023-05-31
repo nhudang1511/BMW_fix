@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,7 @@
 			<div class="x_panel">
 				<div class="x_title">
 					<h2>
-						Thêm danh mục mới
+						Thêm danh mục mới	
 					</h2>
 					<ul class="nav navbar-right panel_toolbox">
 						<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -40,7 +40,7 @@
 							<div class="col-md-6 col-sm-6 ">
 								<select class="form-control" name="categoryId" id="categoryId" required="required">
 									<option value="0">None</option>
-									<c:forEach items="${cateList}" var="cate">
+																		<c:forEach items="${cateList}" var="cate">
 										<option value="${cate._id}">${cate._name}</option>
 									</c:forEach>
 								</select>

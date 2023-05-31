@@ -73,7 +73,7 @@
                             <div class="card">
                             <c:url value="/image?fname=${p.getImage() }" var="imgUrl"></c:url>
 						<img class="img-fluid border-0" width="200px" height="100px"
-							src="${imgUrl}" alt="">
+							src="${imgUrl}" alt="imgas">
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="product?pid=${p._id }"title="View Product">${p.name}</a></h4>
                                     <p class="card-text">${p.description}</p>
