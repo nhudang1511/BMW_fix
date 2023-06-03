@@ -71,7 +71,7 @@
 			<input name="idcard" type="number" id="id_card" class="form-control" placeholder="Id card" required autofocus="">
           	<input name="user" type="text" id="user-name" class="form-control" placeholder="User/ Email" required="" autofocus=""> 
           	<input name="phone" type="number" id="phone" class="form-control" placeholder="Phone" required autofocus=""> 
-			<input name="e_wallet" type="text" id="e_wallet" class="form-control" placeholder="E wallet" required autofocus=""> 
+			<input name="e_wallet" type="number" id="e_wallet" class="form-control" placeholder="E wallet" required autofocus=""> 
 			<input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus=""> 
 			<input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
 

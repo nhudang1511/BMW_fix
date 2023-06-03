@@ -53,10 +53,16 @@ public class CategoryController extends HttpServlet{
 			cid="0";
 		}
 		int id=Integer.parseInt(cid);
+		
 		if(indexPage==null)
 		{
 			indexPage="1";
 		}
+		
+		if(indexPage1 == null) {
+			indexPage1 = "-1";
+		}
+		
 		int index = Integer.parseInt(indexPage);
 		int index1 = Integer.parseInt(indexPage1);
 		

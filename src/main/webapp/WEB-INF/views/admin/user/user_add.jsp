@@ -28,6 +28,8 @@
 					<form role="form" action="${add}" method="post"
 						enctype="multipart/form-data">
 						
+						<input type="hidden" name="csrfToken" value="${sessionScope.csrfToken}"/>
+						
 						<div class="field item form-group">
 							<label class="col-form-label col-md-3 col-sm-3 label-align"
 								for="firstname">First Name <span class="required">*</span>
