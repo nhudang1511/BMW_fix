@@ -59,9 +59,9 @@ public class ProductAddController extends HttpServlet {
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
 				if (item.getFieldName().equals("name")) {
-					model.setName(StringEscapeUtils.escapeHtml4(item.getString("UTF-8")));
+					model.setName(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("description")) {
-					model.setDescription(StringEscapeUtils.escapeHtml4(item.getString("UTF-8")));
+					model.setDescription(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("price")) {
 					model.setPrice(Double.parseDouble(item.getString()));
 				} else if (item.getFieldName().equals("promotionalPrice")) {
