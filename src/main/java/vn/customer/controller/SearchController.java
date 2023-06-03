@@ -16,6 +16,7 @@ import vn.service.ImageProductService;
 import vn.service.ProductService;
 import vn.service.impl.ImageProductServiceImpl;
 import vn.service.impl.ProductServiceImpl;
+import org.owasp.encoder.Encode;
 
 @WebServlet(urlPatterns = {"/search"})
 public class SearchController extends HttpServlet {
@@ -38,18 +39,20 @@ public class SearchController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		//lay tham so tu JSP
 		String txtSearch = req.getParameter("txt");
+        String cleanedContent = Encode.forHtml(txtSearch);
+
 		//buoc 1: Khai tao DAO
 		ProductService modelService = new ProductServiceImpl();
 		CategoryDaoImpl categoryDao = new CategoryDaoImpl();
 		//buoc 2: Su dung doi tuong list de chua danh sach tu ProductDao
-		List<Product> list = modelService.searchbyName(txtSearch);
+		List<Product> list = modelService.searchbyName(cleanedContent);
 		Product list2 = modelService.getTop1Product();
 		List<Category> listC = categoryDao.findAllCategory();
 		//buoc 3: Thiet lap du lieu len JSP
 		req.setAttribute("listall", list);
 		req.setAttribute("list1product", list2);
 		req.setAttribute("listcate", listC);
-		req.setAttribute("txtS", txtSearch);
+		req.setAttribute("txtS", cleanedContent);
 		//buoc 4 tra ve trang JSP nao
 		req.getRequestDispatcher("/WEB-INF/views/customer/search.jsp").forward(req, resp);
 	}
